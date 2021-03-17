@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="501.0" prefWidth="623.0" style="-fx-border-color: #000000; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewCustControl">
+   <children>
+      <GridPane layoutX="40.0" layoutY="105.0" prefHeight="282.0" prefWidth="542.0" style="-fx-border-color: #000000; -fx-border-width: 2; -fx-background-color: #660000;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Customer ID" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Customer Name" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Address " textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Country" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="State/Province" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Postal Code" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Phone Number" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField disable="true" editable="false" promptText="Auto-Generated" GridPane.columnIndex="1" />
+            <TextField fx:id="custName_txtFld" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="address_txtFld" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="country_CBOX" onAction="#countryComboBOX" prefHeight="25.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="state_CBOX" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="pCode_txtFld" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="phone_txtFld" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <opaqueInsets>
+            <Insets left="10.0" right="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </GridPane>
+      <Label layoutX="198.0" layoutY="33.0" style="-fx-background-color: #660000; -fx-border-color: #000000; -fx-border-width: 2;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <GridPane layoutX="510.0" layoutY="401.0" prefHeight="91.0" prefWidth="71.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="24.8000244140625" minHeight="6.399999999999999" prefHeight="6.399999999999999" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="54.39999999999999" minHeight="10.0" prefHeight="54.39999999999999" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#Cancel" style="-fx-background-color: #e1e1d0; -fx-border-color: #000000; -fx-border-width: 2;" text="Cancel" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Save" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #e1e1d0; -fx-border-color: #000000; -fx-border-width: 2;" text="Save" GridPane.halignment="RIGHT">
+               <effect>
+                  <InnerShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect></Button>
+         </children>
+         <effect>
+            <InnerShadow offsetX="2.0" offsetY="2.0">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </GridPane>
+      <Label fx:id="msg_lbl" layoutX="80.0" layoutY="427.0" prefHeight="20.0" prefWidth="429.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="582.0" layoutY="19.0" mnemonicParsing="false" onAction="#exitProgram" style="-fx-background-color: #e1e1d0; -fx-border-color: #000000; -fx-border-width: 2;" text="X">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <InnerShadow offsetX="2.0" offsetY="2.0">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

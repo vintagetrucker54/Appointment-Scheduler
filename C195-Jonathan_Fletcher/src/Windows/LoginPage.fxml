@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="378.0" style="-fx-border-color: #000000; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageControl">
+   <children>
+      <Pane layoutX="55.0" layoutY="85.0" prefHeight="290.0" prefWidth="267.0" style="-fx-background-color: #660000; -fx-border-color: #000000; -fx-border-width: 5;">
+         <children>
+            <GridPane layoutX="37.0" layoutY="46.0" prefHeight="198.0" prefWidth="193.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="login_BTN" mnemonicParsing="false" onAction="#LogIn" style="-fx-background-color: #cdcdb1; -fx-border-color: #000000; -fx-border-width: 2;" text="LOGIN" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow offsetX="2.0" offsetY="2.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </Button>
+                  <Label fx:id="zone_lbl" alignment="CENTER" prefHeight="18.0" prefWidth="220.0" textFill="WHITE" GridPane.rowIndex="4" />
+                  <PasswordField fx:id="password_txtFld" GridPane.rowIndex="3" />
+                  <TextField fx:id="userName_txtFld" GridPane.rowIndex="1" />
+                  <Label fx:id="userName_lbl" text="Username" textFill="WHITE" />
+                  <Label fx:id="password_lbl" layoutX="20.0" layoutY="18.0" text="Password" textFill="WHITE" GridPane.rowIndex="2" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </GridPane>
+         </children></Pane>
+      <Label fx:id="Header_lbl" alignment="CENTER" layoutX="205.0" layoutY="25.0" text="Login" textFill="#660000">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="login_msg" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="176.0" textFill="WHITE">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>
